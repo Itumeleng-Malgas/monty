@@ -6,9 +6,8 @@
 */
 void free_stack(stack_t *head)
 {
-	stack_t *current;
+	stack_t *current = head;
 
-	current = head;
 	while (head)
 	{
 		current = head->next;
@@ -24,21 +23,21 @@ void free_stack(stack_t *head)
 */
 void add_at_head(stack_t **head, const int data)
 {
-    stack_t *new_node = malloc(sizeof(stack_t));
-    if (!new_node)
-    {
-        printf("Error: Out of memory\r\n");
-		exit(0); 
-    }
-    new_node->n = data;
+	stack_t *new_node = malloc(sizeof(stack_t));
 
-    new_node->prev = NULL;
-    new_node->next = *head;
+	if (!new_node)
+	{
+		printf("Error: Out of memory\r\n");
+		exit(0);
+	}
 
-    if (*head != NULL)
-        (*head)->prev = new_node;
+	new_node->n = data;
+	new_node->prev = NULL;
+	new_node->next = *head;
 
-    *head = new_node;
+	if (*head != NULL)
+		(*head)->prev = new_node;
+	*head = new_node;
 }
 
 /**
@@ -48,27 +47,27 @@ void add_at_head(stack_t **head, const int data)
 */
 void add_at_tail(stack_t **head, const int data)
 {
-    stack_t *h, *new_node = malloc(sizeof(stack_t));
-    if (!new_node)
-    {
-        printf("Error: Out of memory\r\n");
+	stack_t *h, *new_node = malloc(sizeof(stack_t));
+
+	if (!new_node)
+	{
+		printf("Error: Out of memory\r\n");
 		exit(0);
-    }
+	}
 
-    new_node->n = data;
-    new_node->next = NULL;
+	new_node->n = data;
+	new_node->next = NULL;
+	h = *head;
 
-    h = *head;
-    if (h != NULL)
-    {
-        while (h->next != NULL)
-            h = h->next;
-        h->next = new_node;
-    }
-    else
-    {
-        *head = new_node;
-    }
-
-    new_node->prev = *head;
+	if (h != NULL)
+	{
+		while (h->next != NULL)
+			h = h->next;
+		h->next = new_node;
+	}
+	else
+	{
+		*head = new_node;
+	}
+	new_node->prev = *head;
 }

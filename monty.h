@@ -20,9 +20,9 @@
 */
 typedef struct stack_s
 {
-    int n;
-    struct stack_s *prev;
-    struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -35,27 +35,34 @@ typedef struct stack_s
 */
 typedef struct instruction_s
 {
-    char *opcode;
-    void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+* enum data_struct_type - defines supported data structures
+* @STACK: stack type
+* @QUEUE: queue type
+*/
 enum data_struct_type
 {
-    STACK,
-    QUEUE
+	STACK,
+	QUEUE
 };
 
 /**
 * struct app_data_s - holds application
+* @type: data structure type
 * @file: monty file handle
 * @line: file data per line
+* @arg: arguments
 */
 typedef struct app_data_s
 {
-    enum data_struct_type type;
-    FILE *file;
-    char *line;
-    char *arg;
+	enum data_struct_type type;
+	FILE *file;
+	char *line;
+	char *arg;
 } app_data_t;
 extern app_data_t app_data;
 
