@@ -27,8 +27,8 @@ void add_at_head(stack_t **head, const int data)
 
 	if (!new_node)
 	{
-		printf("Error: Out of memory\r\n");
-		exit(0);
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 
 	new_node->n = data;
@@ -51,8 +51,8 @@ void add_at_tail(stack_t **head, const int data)
 
 	if (!new_node)
 	{
-		printf("Error: Out of memory\r\n");
-		exit(0);
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 
 	new_node->n = data;
