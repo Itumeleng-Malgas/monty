@@ -12,15 +12,14 @@ int main(int argc, char *argv[])
 	size_t char_count = 1, size = 0;
 	unsigned int counter = 0;
 	stack_t *stack = NULL;
-/*
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-*/
-	//app_data.file = fopen(argv[1], "r");
-	app_data.file = fopen("00.m", "r");
+
+	app_data.file = fopen(argv[1], "r");
 	if (!app_data.file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
