@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		char_count = getline(&app_data.line, &size, app_data.file);
-		if (char_count != -1)
+		if (char_count > 0)
 		{
 			counter++;
 			execute(&stack, counter);
@@ -42,5 +42,5 @@ int main(int argc, char *argv[])
 	free_stack(stack);
 	free(app_data.line);
 	fclose(app_data.file);
-	return (EXIT_SUCCESS);
+	return (0);
 }
