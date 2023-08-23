@@ -71,3 +71,15 @@ void add_at_tail(stack_t **head, const int data)
 	}
 	new_node->prev = *head;
 }
+
+/**
+* clean_up - free memory
+* @head: head pointer
+*/
+void clean_up(stack_t **head)
+{
+	free_stack(*head);
+	free(app_data.line);
+	fclose(app_data.file);
+	exit(EXIT_FAILURE);
+}

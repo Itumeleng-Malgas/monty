@@ -32,10 +32,7 @@ int execute(stack_t **head, unsigned int counter)
 	if (opcode && op_instr[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, opcode);
-		fclose(app_data.file);
-		free_stack(*head);
-		free(app_data.line);
-		exit(EXIT_FAILURE);
+		clean_up(head);
 	}
 	return (1);
 }

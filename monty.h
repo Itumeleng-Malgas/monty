@@ -76,5 +76,6 @@ void _pint(stack_t **head, unsigned int n);
 void free_stack(stack_t *head);
 void add_at_head(stack_t **head, const int data);
 void add_at_tail(stack_t **head, const int data);
+void clean_up(stack_t **head);
 
 #endif

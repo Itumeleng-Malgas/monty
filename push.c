@@ -19,10 +19,7 @@ void _push(stack_t **head, unsigned int counter)
 			if (is_digit)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", counter);
-				fclose(app_data.file);
-				free(app_data.line);
-				free_stack(*head);
-				exit(EXIT_FAILURE);
+				clean_up(head);
 			}
 			i++;
 		}
@@ -30,10 +27,7 @@ void _push(stack_t **head, unsigned int counter)
 	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", counter);
-		fclose(app_data.file);
-		free(app_data.line);
-		free_stack(*head);
-		exit(EXIT_FAILURE);
+		clean_up(head);
 	}
 
 	if (app_data.type == STACK)
