@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
             counter++;
             execute(&stack, counter);
         }
+        app_data.line = 0;
     }
 
     free_stack(stack);
