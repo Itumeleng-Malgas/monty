@@ -1,5 +1,5 @@
 #include "monty.h"
-app_data = {NULL, NULL};
+app_data_t app_data = {STACK, NULL, NULL};
 
 /**
 * main - prog entry pointer
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         if (char_count > 0)
         {
             counter++;
-            printf("execute");
+            execute(&stack, counter);
         }
     }
 

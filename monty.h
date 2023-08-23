@@ -39,6 +39,12 @@ typedef struct instruction_s
     void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+enum data_struct_type
+{
+    STACK,
+    QUEUE
+};
+
 /**
 * struct app_data_s - holds application
 * @file: monty file handle
@@ -46,14 +52,21 @@ typedef struct instruction_s
 */
 typedef struct app_data_s
 {
+    enum data_struct_type type;
     FILE *file;
     char *line;
 } app_data_t;
 extern app_data_t app_data;
 
-void f_push(stack_t **head, unsigned int number);
-void f_pall(stack_t **head, unsigned int number);
-void f_pint(stack_t **head, unsigned int number);
+int execute(stack_t **head, unsigned int counter);
+
+void _push(stack_t **head, unsigned int n);
+void _pall(stack_t **head, unsigned int n);
+void _pint(stack_t **head, unsigned int n);
+
+/** 0-utilities **/
 void free_stack(stack_t *head);
+void add_at_head(stack_t **head, const int data);
+void add_at_tail(stack_t **head, const int data);
 
 #endif
