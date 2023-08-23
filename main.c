@@ -1,5 +1,5 @@
 #include "monty.h"
-app_data_t app_data = {STACK, NULL, NULL};
+app_data_t app_data = {STACK, NULL, NULL, NULL};
 
 /**
 * main - prog entry pointer
@@ -9,9 +9,10 @@ app_data_t app_data = {STACK, NULL, NULL};
 */
 int main(int argc, char *argv[])
 {
-	size_t char_count = 1, size = 0;
+	size_t size = 0;
 	unsigned int counter = 0;
 	stack_t *stack = NULL;
+	long char_count = 0;
 
 	if (argc != 2)
 	{

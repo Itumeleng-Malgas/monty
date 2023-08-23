@@ -9,7 +9,7 @@
 int execute(stack_t **head, unsigned int counter)
 {
 	unsigned int i = 0;
-	char *opcode, *arg;
+	char *opcode;
 
 	instruction_t op_instr[] = {
 		{"push", _push},
