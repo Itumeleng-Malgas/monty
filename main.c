@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
 	}
 
 	free_stack(stack);
+	free(app_data.line);
 	fclose(app_data.file);
 	return (EXIT_SUCCESS);
 }
