@@ -13,7 +13,7 @@ int execute(stack_t **head, unsigned int counter)
 
 	instruction_t op_instr[] = {
 		{"push", _push},
-		{"pall", _pall},
+		{"pall$", _pall},
 		{NULL, NULL}
 	};
 
