@@ -55,6 +55,7 @@ typedef struct app_data_s
     enum data_struct_type type;
     FILE *file;
     char *line;
+    char *arg;
 } app_data_t;
 extern app_data_t app_data;
 

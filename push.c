@@ -8,7 +8,7 @@
 void _push(stack_t **head, unsigned int counter)
 {
 	if (app_data.type == STACK)
-		add_at_head(head, counter);
+		add_at_head(head, atoi(app_data.arg));
 	else
-		add_at_tail(head, counter);
+		add_at_tail(head, atoi(app_data.arg));
 }

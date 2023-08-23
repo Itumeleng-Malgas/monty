@@ -20,7 +20,7 @@ int execute(stack_t **head, unsigned int counter)
     opcode = strtok(app_data.line, " \n\t");
     if (arg && arg[0] == '#')
         return (0);
-    arg = strtok(NULL, " \n\t");
+    app_data.arg = strtok(NULL, " \n\t");
     while (op_instr[i].opcode && opcode)
     {
         if (strcmp(opcode, op_instr[i].opcode) == 0)
