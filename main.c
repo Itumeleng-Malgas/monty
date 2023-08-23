@@ -26,15 +26,16 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    while (char_count > 0)
+    while (1)
     {
         char_count = getline(&app_data.line, &size, app_data.file);
-        if (char_count > 0)
+        if (char_count != -1)
         {
             counter++;
             execute(&stack, counter);
         }
-        app_data.line = 0;
+        else
+            break;
     }
 
     free_stack(stack);
