@@ -11,7 +11,7 @@ void _push(stack_t **head, unsigned int counter)
 
 	if (app_data.arg)
 	{
-		while (app_data.arg[i] != '$')
+		while (app_data.arg[i] != '\0')
 		{
 			/* check if the character is not a digit (0-9) */
 			if (app_data.arg[i] > 57 || app_data.arg[i] < 48)
