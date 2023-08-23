@@ -73,7 +73,7 @@ void add_at_tail(stack_t **head, const int data)
 }
 
 /**
-* clean_up - free memory
+* clean_up - close file, free memory and EXIT_FAILURE
 * @head: head pointer
 */
 void clean_up(stack_t **head)
