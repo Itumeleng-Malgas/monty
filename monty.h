@@ -71,6 +71,7 @@ int execute(stack_t **head, unsigned int counter);
 void _push(stack_t **head, unsigned int n);
 void _pall(stack_t **head, unsigned int n);
 void _pint(stack_t **head, unsigned int n);
+void _pop(stack_t **head, unsigned int n);
 
 /** 0-utilities **/
 void free_stack(stack_t *head);
