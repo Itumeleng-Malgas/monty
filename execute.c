@@ -13,10 +13,13 @@ void execute(stack_t **head, unsigned int counter)
 	instruction_t op_instr[] = {
 		{"push", _push}, {"pall", _pall}, {"pint", _pint}, {"pop", _pop},
 		{"swap", _swap}, {"add", _add}, {"nop", _nop}, {"sub", _sub},
+		{"stack", set_type}, {"queue", set_type},
 		{NULL, NULL}
 	};
 
 	opcode = strtok(app_data.line, " \n\t");
+	app_data.opcode = opcode;
+
 	if (opcode && opcode[0] == '#')
 	{
 		_nop(head, counter);

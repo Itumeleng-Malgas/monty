@@ -1,5 +1,5 @@
 #include "monty.h"
-app_data_t app_data = {STACK, NULL, NULL, NULL};
+app_data_t app_data = {STACK, NULL, NULL, NULL, NULL};
 
 /**
 * main - prog entry pointer

@@ -83,3 +83,17 @@ void clean_up(stack_t **head)
 	fclose(app_data.file);
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * set_type - set data structure type
+ * @head: head pointer
+ * @counter: line_number
+ */
+void set_type(stack_t **head __attribute__((unused)), unsigned int counter)
+{
+	(void) counter;
+	if (strcmp(app_data.opcode, "stack"))
+			app_data.type = STACK;
+	else
+		app_data.type = QUEUE;
+}

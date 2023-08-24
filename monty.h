@@ -62,6 +62,7 @@ typedef struct app_data_s
 	enum data_struct_type type;
 	FILE *file;
 	char *line;
+	char *opcode;
 	char *arg;
 } app_data_t;
 extern app_data_t app_data;
@@ -81,5 +82,6 @@ void free_stack(stack_t *head);
 void add_at_head(stack_t **head, const int data);
 void add_at_tail(stack_t **head, const int data);
 void clean_up(stack_t **head);
+void set_type(stack_t **head, unsigned int c);
 
 #endif
