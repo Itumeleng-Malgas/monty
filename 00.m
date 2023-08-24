@@ -6,4 +6,6 @@ push 4
 pop
 swap
 add
+push 6
+sub
 pint

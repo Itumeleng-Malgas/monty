@@ -74,6 +74,7 @@ void _pop(stack_t **head, unsigned int c);
 void _swap(stack_t **head, unsigned int c);
 void _add(stack_t **head, unsigned int c);
 void _nop(stack_t **head, unsigned int c);
+void _sub(stack_t **head, unsigned int c);
 
 /** 0-utilities **/
 void free_stack(stack_t *head);

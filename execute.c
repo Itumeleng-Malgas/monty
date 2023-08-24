@@ -12,11 +12,14 @@ void execute(stack_t **head, unsigned int counter)
 
 	instruction_t op_instr[] = {
 		{"push", _push}, {"pall", _pall}, {"pint", _pint}, {"pop", _pop},
-		{"swap", _swap}, {"add", _add}, {"nop", _nop},
+		{"swap", _swap}, {"add", _add}, {"nop", _nop}, {"sub", _sub},
 		{NULL, NULL}
 	};
 
 	opcode = strtok(app_data.line, " \n\t");
+	if (opcode && opcode[0] == '#')
+		return;
+
 	app_data.arg = strtok(NULL, " \n\t");
 	while (op_instr[i].opcode && opcode)
 	{
