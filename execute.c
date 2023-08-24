@@ -15,6 +15,7 @@ void execute(stack_t **head, unsigned int counter)
 		{"swap", _swap}, {"add", _add}, {"nop", _nop}, {"sub", _sub},
 		{"stack", set_type}, {"queue", set_type}, {"div", _div}, {"mul", _mul},
 		{"mod", _mod}, {"pchar", _pchar}, {"pstr", _pstr}, {"rotl",_rotl},
+		{"rotr", _rotr},
 		{NULL, NULL}
 	};
 
