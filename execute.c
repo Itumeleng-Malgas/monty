@@ -4,20 +4,15 @@
 * execute - run the commands
 * @head: list head pointer
 * @counter: line counter
-* Return: 1 success 0 failure
 */
-int execute(stack_t **head, unsigned int counter)
+void execute(stack_t **head, unsigned int counter)
 {
 	unsigned int i = 0;
 	char *opcode;
 
 	instruction_t op_instr[] = {
-		{"push", _push},
-		{"pall", _pall},
-		{"pint", _pint},
-		{"pop", _pop},
-		{"swap", _swap},
-		{"add", _add},
+		{"push", _push}, {"pall", _pall}, {"pint", _pint}, {"pop", _pop},
+		{"swap", _swap}, {"add", _add}, {"nop", _nop},
 		{NULL, NULL}
 	};
 
@@ -28,7 +23,7 @@ int execute(stack_t **head, unsigned int counter)
 		if (strcmp(opcode, op_instr[i].opcode) == 0)
 		{
 			op_instr[i].f(head, counter);
-			return (0);
+			return;
 		}
 		i++;
 	}
@@ -38,5 +33,4 @@ int execute(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, opcode);
 		clean_up(head);
 	}
-	return (1);
 }

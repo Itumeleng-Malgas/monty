@@ -66,13 +66,14 @@ typedef struct app_data_s
 } app_data_t;
 extern app_data_t app_data;
 
-int execute(stack_t **head, unsigned int c);
+void execute(stack_t **head, unsigned int c);
 void _push(stack_t **head, unsigned int c);
 void _pall(stack_t **head, unsigned int c);
 void _pint(stack_t **head, unsigned int c);
 void _pop(stack_t **head, unsigned int c);
 void _swap(stack_t **head, unsigned int c);
 void _add(stack_t **head, unsigned int c);
+void _nop(stack_t **head, unsigned int c);
 
 /** 0-utilities **/
 void free_stack(stack_t *head);
