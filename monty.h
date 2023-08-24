@@ -78,6 +78,7 @@ void _nop(stack_t **head, unsigned int c);
 void _sub(stack_t **head, unsigned int c);
 void _div(stack_t **head, unsigned int c);
 void _mul(stack_t **head, unsigned int c);
+void _mod(stack_t **head, unsigned int c);
 
 /** 0-utilities **/
 void free_stack(stack_t *head);
