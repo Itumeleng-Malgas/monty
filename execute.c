@@ -17,6 +17,7 @@ int execute(stack_t **head, unsigned int counter)
 		{"pint", _pint},
 		{"pop", _pop},
 		{"swap", _swap},
+		{"add", _add},
 		{NULL, NULL}
 	};
 
