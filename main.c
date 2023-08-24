@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	unsigned int counter = 0;
 	stack_t *stack = NULL;
-	long char_count = 0;
+	ssize_t char_count = 0;
 
 	if (argc != 2)
 	{
