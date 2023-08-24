@@ -80,6 +80,7 @@ void _div(stack_t **head, unsigned int c);
 void _mul(stack_t **head, unsigned int c);
 void _mod(stack_t **head, unsigned int c);
 void _pchar(stack_t **head, unsigned int c);
+void _pstr(stack_t **head, unsigned int c);
 
 /** 0-utilities **/
 void free_stack(stack_t *head);
