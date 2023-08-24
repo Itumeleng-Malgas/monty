@@ -1,6 +1,2 @@
-push 10
-push 10
-push 10
-push 2
-mod
-pall
+push 72
+pchar
