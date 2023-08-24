@@ -9,10 +9,9 @@ app_data_t app_data = {STACK, NULL, NULL, NULL};
 */
 int main(int argc, char *argv[])
 {
-	size_t size = 0;
-	unsigned int counter = 0;
-	stack_t *stack = NULL;
+	size_t size = 0, counter = 0;
 	ssize_t char_count = 0;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
