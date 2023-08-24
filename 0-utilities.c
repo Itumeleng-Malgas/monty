@@ -93,7 +93,7 @@ void set_type(stack_t **head __attribute__((unused)), unsigned int counter)
 {
 	(void) counter;
 	if (strcmp(app_data.opcode, "stack"))
-			app_data.type = STACK;
+		app_data.type = STACK;
 	else
 		app_data.type = QUEUE;
 }
