@@ -18,7 +18,10 @@ void execute(stack_t **head, unsigned int counter)
 
 	opcode = strtok(app_data.line, " \n\t");
 	if (opcode && opcode[0] == '#')
+	{
+		_nop(head, counter);
 		return;
+	}
 
 	app_data.arg = strtok(NULL, " \n\t");
 	while (op_instr[i].opcode && opcode)
