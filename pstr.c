@@ -8,6 +8,9 @@ void _pstr(stack_t **head, unsigned int counter __attribute__((unused)))
 {
 	stack_t *h = *head;
 
+	if (h == NULL)
+		return;
+
 	while (h)
 	{
 		if (h->n)
