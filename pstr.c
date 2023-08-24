@@ -10,7 +10,7 @@ void _pstr(stack_t **head, unsigned int counter __attribute__((unused)))
 
 	while (h)
 	{
-		if (h->n > 127 || h->n <= 0)
+		if (h->n > 127 || h->n < 0)
 			break;
 		printf("%c", h->n);
 		h = h->next;
